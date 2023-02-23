@@ -7,11 +7,21 @@
       <label for="Precio-Item">Precio del Item: </label>
       <input type="number" id="Precio-Item" />
 
+      <label for="cod-estado">Codigo de Estado: </label>
+      <select name="estados" id="estados">
+        <option value="CA">CA</option>
+        <option value="TX">TX</option>
+        <option value="AL">AL</option>
+        <option value="NV">NV</option>
+        <option value="UT">UT</option>
+      </select>
+
       <input type="submit" value="Mostrar" id="mostrar-button" />
     </form>
     
     <div id="Cant-div"></div>
     <div id="Precio-div"></div>
+    <div id="CodEstados-div"></div>
     <script type="module" src="./src/presenter.js"></script>
 
   </body>
