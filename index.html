@@ -1,13 +1,17 @@
 <html>
   <body>
-    <h1>TOTALIZADOR DE VENTAS</h1>
     <form id="Mostrar-form">
+      <h1>TOTALIZADOR DE VENTAS</h1>
       <label for="Cant-Item">Cantidad de Items: </label>
       <input type="number" id="Cant-Item" />
+      <label for="Precio-Item">Precio del Item: </label>
+      <input type="number" id="Precio-Item" />
+
       <input type="submit" value="Mostrar" id="mostrar-button" />
     </form>
     
-    <div id="Total-div"></div>
+    <div id="Cant-div"></div>
+    <div id="Precio-div"></div>
     <script type="module" src="./src/presenter.js"></script>
 
   </body>
