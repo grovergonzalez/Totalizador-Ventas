@@ -1,7 +1,7 @@
 <html>
-  <body>
+  <body style="background-color: black; color: aqua;">
     <form id="Mostrar-form">
-      <h1>TOTALIZADOR DE VENTAS</h1>
+      <h1 style="color: yellow;">TOTALIZADOR DE VENTAS</h1>
       <label for="Cant-Item">Cantidad de Items: </label>
       <input type="number" id="Cant-Item" />
       <label for="Precio-Item">Precio del Item: </label>
@@ -17,14 +17,13 @@
       </select>
 
       <input type="submit" value="Mostrar" id="mostrar-button" />
+      <div id="Cant-div"></div>
+      <div id="Precio-div"></div>
+      <div id="CodEstados-div"></div>
+      <div id="CantImpuestodiv"></div>
+      <div id="CalcularPrecioNeto-div"></div>
     </form>
-    
-    <div id="Cant-div"></div>
-    <div id="Precio-div"></div>
-    <div id="CodEstados-div"></div>
-    <div id="CantImpuestodiv"></div>
-    <input type="submit" value="Calcular-Total" id="Calcular-Total" />
-    
+
 
     <script type="module" src="./src/presenter.js"></script>
 
