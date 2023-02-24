@@ -1,6 +1,7 @@
 import MostrarImpuesto from "./MostrarImpuesto";
 import CalcularPrecioNeto from "./CalcularPrecioNeto";
 import CalcularDescuento from "./CalcularDescuento";
+import CalcularTotal from "./CalcularTotal";
 
 const cantItems = document.querySelector("#Cant-Item");
 const precioItems = document.querySelector("#Precio-Item");
@@ -11,8 +12,9 @@ const preciodiv = document.querySelector("#Precio-div");
 const ImpuestoDiv = document.querySelector("#CantImpuestodiv");
 const CalcularPrecioNetodiv = document.querySelector("#CalcularPrecioNeto-div");
 const CalcularDescdiv = document.querySelector("#CalcularDescuento-div");
+const PrecioTotaldiv = document.querySelector("#Precio-total")
 
-const Cantimpuesto = new Map([
+const Estados = new Map([
   ['UT', 6.65],
   ['NV', 8],
   ['TX', 6.25],
@@ -27,5 +29,6 @@ form.addEventListener("submit", (event) => {
   preciodiv.innerHTML = "Precio por Item: " + precioItems.value;
   CalcularPrecioNetodiv.innerHTML = "Precio Neto: " + CalcularPrecioNeto(cantItems.value, precioItems.value);
   CalcularDescdiv.innerHTML = "Descuento: " + CalcularDescuento(cantItems.value) + "%";
-  ImpuestoDiv.innerHTML = "Impuesto para " +  codEstados.value + " " + "(%" + MostrarImpuesto(Cantimpuesto, codEstados.value) + ")";
+  ImpuestoDiv.innerHTML = "Impuesto para " +  codEstados.value + " " + "(%" + MostrarImpuesto(Estados, codEstados.value) + ")";
+  PrecioTotaldiv.innerHTML = "Precio total (descuento e impuesto): " + CalcularTotal(cantItems.value, precioItems.value, codEstados.value, Estados);
 });
